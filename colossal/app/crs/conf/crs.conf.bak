@@ -1,0 +1,118 @@
+cluster:
+{
+	total_maps = 9111;
+	total_reduces = 5465;
+};
+
+pools:
+       (
+		{ name = "analyst";
+		  min_share_timeout = 7200.0;
+		  fair_share_timeout = 900.0;
+		  weight = 2.0;
+		  map_min_share = 2287;
+		  reduce_min_share = 1372;
+		  sched_mode = "fair";
+		  job_arrival_rate = 0.002616272;
+		  logmean_maps_per_job = 5.035689;
+		  logmean_reduces_per_job = 2.292386;
+		  logsd_maps_per_job = 3.386985;
+		  logsd_reduces_per_job = 2.713747;
+		  logmean_map_duration = 4.106483;
+		  logmean_reduce_duration = 5.154561;
+		  logsd_map_duration = 0.9292413;
+		  logsd_reduce_duration = 2.056345; },
+
+		{ name = "default";
+		  min_share_timeout = 86400.0;
+		  fair_share_timeout = 900.0;
+		  weight = 1.0;
+		  map_min_share = 274;
+		  reduce_min_share = 164;
+		  sched_mode = "fair";
+		  job_arrival_rate = 0.004299325;
+		  logmean_maps_per_job = 2.598211;
+		  logmean_reduces_per_job = 1.183991;
+		  logsd_maps_per_job = 2.612202;
+		  logsd_reduces_per_job = 2.005147;
+		  logmean_map_duration = 4.465257;
+		  logmean_reduce_duration = 4.27999;
+		  logsd_map_duration = 1.606384;
+		  logsd_reduce_duration = 1.356504; },
+
+		{ name = "engineer";
+		  min_share_timeout = 7200.0;
+		  fair_share_timeout = 900.0;
+		  weight = 2.0;
+		  map_min_share = 1738;
+		  reduce_min_share = 1042;
+		  sched_mode = "fair";
+		  job_arrival_rate = 0.008359859;
+		  logmean_maps_per_job = 3.361886;
+		  logmean_reduces_per_job = 1.589526;
+		  logsd_maps_per_job = 2.597019;
+		  logsd_reduces_per_job = 2.022896;
+		  logmean_map_duration = 3.972364;
+		  logmean_reduce_duration = 5.168297;
+		  logsd_map_duration = 1.173483;
+		  logsd_reduce_duration = 1.814199; },
+
+		{ name = "mobile";
+		  min_share_timeout = 7200.0;
+		  fair_share_timeout = 900.0;
+		  weight = 2.0;
+		  map_min_share = 274;
+		  reduce_min_share = 164;
+		  sched_mode = "fair";
+		  job_arrival_rate = 0.002569396;
+		  logmean_maps_per_job = 4.749138;
+		  logmean_reduces_per_job = 1.10358;
+		  logsd_maps_per_job = 1.992492;
+		  logsd_reduces_per_job = 2.31748;
+		  logmean_map_duration = 4.431748;
+		  logmean_reduce_duration = 4.269572;
+		  logsd_map_duration = 1.56273;
+		  logsd_reduce_duration = 1.326327; },
+
+		{ name = "modeling";
+		  min_share_timeout = 120.0;
+		  fair_share_timeout = 900.0;
+		  weight = 6.0;
+		  map_min_share = 1830;
+		  reduce_min_share = 1097;
+		  sched_mode = "fair";
+		  job_arrival_rate = 0.01216285;
+		  logmean_maps_per_job = 3.115514;
+		  logmean_reduces_per_job = 1.9098;
+		  logsd_maps_per_job = 2.657954;
+		  logsd_reduces_per_job = 2.681941;
+		  logmean_map_duration = 4.783622;
+		  logmean_reduce_duration = 4.375862;
+		  logsd_map_duration = 1.205787;
+		  logsd_reduce_duration = 1.315713; },
+
+		{ name = "prod";
+		  min_share_timeout = 120.0;
+		  fair_share_timeout = 900.0;
+		  weight = 6.0;
+		  map_min_share = 2287;
+		  reduce_min_share = 1372;
+		  sched_mode = "fair";
+		  job_arrival_rate = 0.05804283;
+		  logmean_maps_per_job = 2.866289;
+		  logmean_reduces_per_job = 0.832229;
+		  logsd_maps_per_job = 1.70586;
+		  logsd_reduces_per_job = 1.711059;
+		  logmean_map_duration = 4.310724;
+		  logmean_reduce_duration = 4.873977;
+		  logsd_map_duration = 1.302978;
+		  logsd_reduce_duration = 1.906587; }
+       );
+
+simulator:
+{
+	simulation_period = 604800; # run the simulation for one week
+	metrics = "output/metrics.txt"; # output metrics file
+	metrics_win = 50000; # reporting metrics every after 50000 events
+	output = "output/sched.txt"; # output schedule file
+};

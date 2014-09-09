@@ -1,0 +1,14 @@
+Map utilization:0.751132
+Reduce utilization:0.68608
+>> Pool analyst map utilization:0.116176
+>> Pool analyst reduce utilization:0.112859
+>> Pool default map utilization:0.0268687
+>> Pool default reduce utilization:0.0213986
+>> Pool engineer map utilization:0.101043
+>> Pool engineer reduce utilization:0.0749956
+>> Pool mobile map utilization:0.0785887
+>> Pool mobile reduce utilization:0.0677921
+>> Pool modeling map utilization:0.320232
+>> Pool modeling reduce utilization:0.276182
+>> Pool prod map utilization:0.149496
+>> Pool prod reduce utilization:0.175035
