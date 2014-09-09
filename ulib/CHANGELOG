@@ -1,0 +1,87 @@
+04/13/2014
+	1. Optimized MPS.
+	2. Updated Makefiles.
+
+04/12/2014
+	1. Added MPS.
+03/18/2014
+	1. Added an app/ directory and an RPC implementation.
+01/07/2014
+	1. Added dynamic programming algorithms.
+06/08/2013
+	1. Added kmeans performance test.
+05/17/2013
+	1. Fixed a bug in the iterator of hash_open_set/map: operator++()
+	might read a byte beyond the flag array.
+05/16/2013
+	1. Fixed a bug in the os_regionlock.h, which uses mutex
+	initializer for rwlocks.
+05/15/2013
+	1. Made the chunk() constant in mc_splitter.h.
+	2. Added array_chunk, a generic array chunk.
+	3. Made chunk class in MapCombine compatible with STL containers.
+	4. Fixed a bug in text_splitter step length calculation.
+05/11/2013
+	1. Renamed aligned hash to open hash.
+04/06/2013
+	1. Used gnu99 C standard for compiling.
+	2. Fixed a potential compiling problem for crypt_md5.c
+03/19/2013
+	1. Added a measurement for the false positive ratio of a bloom
+	filter.
+	2. Refined the optimal number of hash function calculation in the
+	bloom filter.
+	3. Updated old benchmarks for the AVL tree.
+	4. Fixed the mismatched prototypes for the Splay tree.
+03/18/2013
+	1. Improved the interface of binary search trees.
+	2. Added benchmarks for trees.
+03/14/2013
+	1. Updated the make system.
+03/12/2013
+	1. Added fermat hash functions.
+	2. Added hash function benchmarks.
+03/10/2013
+	1. Added Fermat mix function.
+	2. Added benchmarks for integer hash functions.
+03/07/2013
+	1. Added Anderson's method for bit reversing.
+	2. Added a macro for 128-bit multiplication.
+03/03/2013
+	1. Replaced the Feller's approximation for n! with Gosper's.
+02/18/2013
+	1. Improved various hweight performance.
+	2. Added lcm.
+02/07/2013
+	1. Refined the comments of hash_open_prot.h and hash_chain_prot.h.
+	2. Reimplemented the getfield in str_util.h and removed getlinefield.
+01/22/2013
+	1. Added normal rng and gamma rng.
+01/16/2013
+	1. A more elegant approach to the map-combine splitter.
+01/08/2013
+	1. Added key reference for key_t in hash_open_prot.h.
+	2. MapReduce based on PSM is supports grouping now. The
+	implementation relies heavily on the 'new' operator which could be
+	a performance bottleneck. The next step is to remove it.
+01/07/2013
+	1. Slightly modified hash_open_prot.h.
+	2. Provide both map and set in hash_chain_prot.h.
+	3. Improved listsort performance by removing unnecessary
+	comparisons in the final merge. Also added list_sort_forward.
+	4. Implemented the Proxy Synchronization Model for the MapReduce
+	framework.
+01/04/2013
+	1. Indent the Makefile output.
+01/01/2013
+	1. Fixed a deadlock risk in mcs_lock and k42 lock
+	implementations. Added a barrier between setting the lock and
+	linking current node to its predecessor in case the predecessor
+	unlocks earlier than setting the lock, resulting in the acquirer
+	waits forever.
+12/31/2012
+	1. Fixed the returning value type for trylocks in os_typelock.h.
+	2. Modified chainhash_r to use rwlocks. // Actually it can use
+	one-writer-multi-reader lock.
+	3. Reimplemented the combine() method for both multihash and
+	chain_hash_r. The new implementation uses the operator[] instead.
