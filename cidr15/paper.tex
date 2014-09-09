@@ -1,0 +1,144 @@
+% This is sigproc-sp.tex -FILE FOR V2.6SP OF ACM_PROC_ARTICLE-SP.CLS
+% OCTOBER 2002
+%
+% For tracking purposes - this is V2.6SP - OCTOBER 2002
+
+\documentclass{sig-alternate}
+
+\usepackage{times}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{epsfig}
+\usepackage{psboxit}
+\usepackage{textcomp}
+\usepackage{xspace}
+\usepackage{pifont}
+\usepackage{listings}
+\urlstyle{same}
+\lstset{alsoletter={-},breaklines=true}
+\newcommand{\cmark}{\ding{51}}
+% Useful counters
+\newcounter{defcount}
+\newcommand{\initdefcc}{\setcounter{defcount}{0}}
+\newcommand{\defcc}{\addtocounter{defcount}{1}\thedefcount.}
+
+\newcounter{lemcount}
+\newcommand{\initlemcc}{\setcounter{lemcount}{0}}
+\newcommand{\lemcc}{\addtocounter{lemcount}{1}\thelemcount.}
+%----------------
+
+% Referencing commands
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\tableref}[1]{Table~\ref{#1}}
+
+% Spacing commands
+\makeatletter
+\newcommand{\tinyspacing}{\let\CS=\@currsize\renewcommand
+{\baselinestretch}{.9}\tiny\CS}
+\newcommand{\singlespacing}{\let\CS=\@currsize\renewcommand
+{\baselinestretch}{0.99}\tiny\CS}
+\newcommand{\oneonespacing}{\let\CS=\@currsize\renewcommand
+{\baselinestretch}{1.1}\tiny\CS}
+\newcommand{\onetwospacing}{\let\CS=\@currsize\renewcommand
+{\baselinestretch}{1.2}\tiny\CS}
+\newcommand{\doublespacing}{\let\CS=\@currsize\renewcommand
+{\baselinestretch}{1.3}\tiny\CS} \makeatother
+
+\def\hyph{-\penalty0\hskip0pt\relax}
+% Bullet List squished
+\newcommand{\squishlist}{
+  \begin{list}{$\bullet$}
+   {
+     \setlength{\itemsep}{0pt}
+     \setlength{\parsep}{0pt}
+     \setlength{\topsep}{0pt}
+     \setlength{\partopsep}{0pt}
+     \setlength{\leftmargin}{1.5em}
+     \setlength{\labelwidth}{1em}
+     \setlength{\labelsep}{0.5em} } 
+}
+\newcommand{\squishend}{
+   \end{list} 
+}
+
+\newcommand{\eat}[1]{}
+
+\newcommand{\otspace}{\vspace*{-1.2em}}
+\newcommand{\ospace}{\vspace*{-1em}}
+\newcommand{\ofspace}{\vspace*{-1.4em}}
+
+%----------------
+\newcounter{ccc}
+\newcommand{\bcc}{\setcounter{ccc}{1}\theccc.}
+\newcommand{\icc}{\addtocounter{ccc}{1}\theccc.}
+%----------------
+
+\newcommand{\myhrule}{\rule[.5pt]{\hsize}{.5pt}}
+
+% New commands for beginning and ending an equation
+\newcommand{\beq}{
+   \vspace{-2mm}
+   \begin{equation}
+}
+\newcommand{\eeq}{
+   \end{equation} 
+   \vspace{-2mm}
+}
+
+
+
+\begin{document}
+\conferenceinfo{$7^{th}$ Biennial Conference on Innovative Data Systems Research (CIDR)}{January 7-10, 2007, Asilomar, California, USA.}
+
+\title{A Colossal Attempt to Manage Multi-tenant Big Data Analytics at
+Scale}
+ 
+\numberofauthors{3}
+
+\author{
+\alignauthor
+Zilong Tan\\
+       \affaddr{Duke University}\\
+       \email{ztan@cs.duke.edu}
+\alignauthor
+Shivnath Babu\\
+       \affaddr{Duke University}\\
+       \email{shivnath@cs.duke.edu}
+\alignauthor
+Eric Chu\\
+       \affaddr{Rocket Fuel, Inc.}\\
+       \email{echu@rocketfuel.com}
+}
+
+\maketitle
+
+\input{abstract}
+
+\input{secIntro}
+
+\input{secChallenges}
+
+\input{secColossal}
+
+\input{secFuture}
+
+%\vspace{-3mm}
+
+{
+\small
+%\singlespacing
+\bibliographystyle{abbrv}
+\bibliography{paper}
+}
+%\vspace{-4mm}
+%\appendix
+
+%\input{demo}
+
+
+\end{document}

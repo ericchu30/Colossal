@@ -1,0 +1,62 @@
+\begin{thebibliography}{10}
+
+\bibitem{DBLP:journals/pvldb/DasNLS13}
+S.~Das, V.~R. Narasayya, F.~Li, and M.~Syamala.
+\newblock Cpu sharing techniques for performance isolation in multitenant
+  relational database-as-a-service.
+\newblock {\em PVLDB}, 7(1):37--48, 2013.
+
+\bibitem{ghodsi11}
+A.~Ghodsi, M.~Zaharia, B.~Hindman, A.~Konwinski, S.~Shenker, and I.~Stoica.
+\newblock Dominant resource fairness: Fair allocation of multiple resources
+  types.
+\newblock In {\em NSDI}, 2011.
+
+\bibitem{fair-share-scheduler}
+{Hadoop Fair Scheduler}.
+\newblock hadoop.apache.org/docs/r1.2.1/fair\_scheduler.html.
+
+\bibitem{sls}
+{Hadoop SLS Simulator}.
+\newblock hadoop.apache.org/docs/r2.3.0/hadoop-sls/SchedulerLoadSimulator.html.
+
+\bibitem{mr-sim}
+S.~Hammoud, M.~Li, Y.~Liu, N.~K. Alham, and Z.~Liu.
+\newblock Mrsim: A discrete event based mapreduce simulator.
+\newblock In {\em FSKD}, pages 2993--2997. IEEE, 2010.
+
+\bibitem{mesos}
+B.~Hindman, A.~Konwinski, M.~Zaharia, A.~Ghodsi, A.~D. Joseph, R.~Katz,
+  S.~Shenker, and I.~Stoica.
+\newblock {Mesos: A Platform for Fine-Grained Resource Sharing in the Data
+  Center}.
+\newblock In {\em NSDI}, 2011.
+
+\bibitem{isard09}
+M.~Isard, V.~Prabhakaran, J.~Currey, U.~Wieder, K.~Talwar, and A.~Goldberg.
+\newblock Quincy: fair scheduling for distributed computing clusters.
+\newblock In {\em SOSP}, pages 261--276, 2009.
+
+\bibitem{conf/cidr/NarasayyaDSCC13}
+V.~R. Narasayya, S.~Das, M.~Syamala, B.~Chandramouli, and S.~Chaudhuri.
+\newblock Sqlvm: Performance isolation in multi-tenant relational
+  database-as-a-service.
+\newblock In {\em CIDR}, 2013.
+
+\bibitem{taobao-paper}
+Z.~Ren, X.~Xu, J.~Wan, W.~Shi, and M.~Zhou.
+\newblock Workload characterization on a production hadoop cluster: A case
+  study on taobao.
+\newblock In {\em IISWC}, pages 3--13. IEEE Computer Society, 2012.
+
+\bibitem{conf/cluster/VermaCC11}
+A.~Verma, L.~Cherkasova, and R.~H. Campbell.
+\newblock Play it again, simmr!
+\newblock In {\em CLUSTER}, pages 253--261. IEEE, 2011.
+
+\bibitem{yarn}
+{Apache Hadoop NextGen MapReduce (YARN)}.
+\newblock
+  \url{http://hadoop.apache.org/docs/r0.23.0/hadoop-yarn/hadoop-yarn-site/YARN.html}.
+
+\end{thebibliography}

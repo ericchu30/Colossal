@@ -1,0 +1,47 @@
+
+\section{Discussion and Related Work}
+\label{sec:sec4}
+
+Efficient processing of big data has given rise to multi-tenant, big data clusters where multiple applications run on and share the same resources and data. Such multi-tenancy poses significant challenges for human operators of the cluster to tune the cluster to meet performance requirements that often conflict each other. The research and open-source communities 
+are doing a lot of work in this area. The main threads of 
+work include: (a) building cluster operating systems 
+like Mesos \cite{mesos} and YARN \cite{yarn}
+that have the resource provisioning and 
+isolation mechanisms to support multi-tenancy; (b) 
+algorithms and policies to allocate resources in ways that are 
+efficient as well as fair to all tenants \cite{conf/cidr/NarasayyaDSCC13,ghodsi11,isard09}; and (c) ability to support multiple tenants
+on as few software and hardware resources as possible 
+(e.g., \cite{DBLP:journals/pvldb/DasNLS13}).
+
+In this paper, we observed that, in practice, the responsibility 
+of managing multi-tenancy falls largely on the operations team that 
+manages a  multi-tenant cluster. 
+We used operational experiences from a large, multi-tenant 
+cluster to discuss the challenges that arise. Specifically, 
+we observed that cluster operators have 
+few effective tools to make data-driven decisions
+while managing multi-tenancy. We described 
+Colossal, a platform that we have developed to address this gap. 
+
+Space contraints precluded us from presenting results from an experimental
+evaluation. Overall, the primary advantages that Colossal 
+offers are: 
+\begin{itemize}
+
+\item{\em Efficiency}: Colossal can predict, with acceptable 
+levels of accuracy, the performance metrics and schedule
+of one week's workload at Rocket Fuel 
+(approximately, 55,000+ MapReduce jobs and 36 million attempts) in
+under four minutes on a commodity machine.
+
+\item{\em Flexibility}: Colossal allows for easy abstraction, modification, 
+and prediction of the workload over any specified time period lengths.
+
+\item{\em Modularity}: The components that generate the 
+workload as well as predicted performance metrics
+are pluggable. Thus, Colossal can be customized based on the 
+characteristics and needs of different multi-tenant environments. 
+
+\end{itemize}
+
+
