@@ -1,0 +1,51 @@
+The parser is a MapReduce program that converts Hadoop job history
+files to a dataset table. The columns of the dataset table are:
+
+      1. JobID
+      2. Pool
+      3. Job priority
+      4. Total maps of the job
+      5. Total reduces of the job
+      6. Job submission time in milliseconds since epoch
+      7. Job launch time in milliseconds since epoch
+      8. Job finish time in milliseconds since epoch
+      9. Finished maps of the job
+      10. Finished reduces of the job
+      11. Job status
+      12. AttemptID
+      13. Task type
+      14. Attempt start time in milliseconds since epoch
+      15. Attempt finish time in milliseconds since epoch
+      16. Task status
+
+An example row of the dataset table is
+
+job_201405200258_483499 prod    VERY_HIGH       8       0\
+1406002825587   1406002829234   1406003014947   8      0  SUCCESS\
+attempt_201405200258_483499_m_000002_0  MAP     1406002869158\
+1406002981157   SUCCESS
+
+To launch the parser, simply run the script ./run_parser.sh. This
+command will submit a Hadoop job using streaming.
+
+[Strengths & Limits]
+
+1. The parser supports concatenated job history files, that is, several
+job history files can be concatenated into a large file and is then
+inputted to the parser.
+
+2. However, each input file of the parser, either an individual job
+history file or a concatenated job history file, must be
+integral. That is, information regarding a job cannot be split into
+more than one input files of the parser.
+
+3. The size of each input file of the parser can not exceed
+10000000000 bytes.
+
+4. Output dataset may contain rows with zero attempt start time and
+finish time.
+
+5. The output of the parser may consist of several HDFS files, which
+depends on the number of reduces. The parser guarantees that attempts
+for a particular job are stored as consecutive (unordered) rows in
+one of these output files.
